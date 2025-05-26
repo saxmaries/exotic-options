@@ -1,8 +1,8 @@
-# Exotic Options Pricing – Structured Products Playground
+# Exotic Options
 
 This project is a personal exploration and implementation of exotic option products, aimed at deepening practical understanding of **structured derivatives** as used on trading desks.
 
-Rather than focusing on abstract quant models, this repo reflects the type of work an **exotic structurer** would do — linking **product payoffs**, **market views**, and **risk considerations** through simulation, visualization, and pricing tools.
+Rather than focusing on abstract quant models, this repo reflects the type of work an **exotic structurer** would do, linking **product payoffs**, **market views**, and **risk considerations** through simulation, visualization, and pricing tools.
 
 ---
 
