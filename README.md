@@ -27,7 +27,6 @@ It's designed to help answer questions like:
 To follow this repo, you should be comfortable with:
 - **Vanilla option pricing** and the **Black-Scholes framework**
 - Basic **stochastic calculus** (GBM, volatility surfaces)
-- The structure and features of products like **autocallables**, **digitals**, and **range accruals**
 - Python and Jupyter
 
 ---
