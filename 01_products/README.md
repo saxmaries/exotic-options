@@ -8,7 +8,7 @@ Each file implements a specific product type, such as:
 - **Asian options** (arithmetic / geometric)
 - **Digital / binary options**
 - **Autocallables** (vanilla, Phoenix, worst-of)
-- **Cliquet and path-dependent instruments**
+- **Cliquet options**
 - **Lookback options**
 - **Range accruals**
 - **Snowballs**
