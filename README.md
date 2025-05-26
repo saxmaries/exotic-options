@@ -39,5 +39,5 @@ To follow this repo, you should be comfortable with:
 ├── 01_products/         # Product-specific payoff definitions
 ├── 02_models/           # Underlying model engines (GBM, Heston, etc.)
 ├── 03_simulations/      # Monte Carlo pricing engine
-├── 04_greeks/           # Risk sensitivities (optional)
+├── 04_greeks/           # Risk sensitivities
 ├── 05_notebooks/        # Interactive notebooks for analysis & visualization
