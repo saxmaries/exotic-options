@@ -1,4 +1,4 @@
-# 02_modls
+# Models
 
 Contains stochastic processes used to model asset dynamics.
 
