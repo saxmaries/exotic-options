@@ -8,7 +8,7 @@ Rather than focusing on abstract quant models, this repo reflects the type of wo
 
 ## Why This Exists
 
-Structured products like autocallables, barriers, and snowballs are widely used in equity and FX markets to tailor yield, manage risk, or reflect investor views. 
+Structured products are widely used in equity and FX markets to tailor yield, manage risk, or reflect investor views. 
 
 This project simulates and prices these products using:
 - Realistic **stochastic models** (GBM, Heston),
