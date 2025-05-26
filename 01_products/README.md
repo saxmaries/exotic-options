@@ -15,6 +15,7 @@ Each file implements a specific product type, such as:
 - **FX dual-currency structures**
 
 Each product exposes a `payoff(path)` method, which defines the deterministic cashflow logic based on an input price path. These are used by pricing and simulation engines in `03_simulations`.
-Each class may also implement a describe() or plot_payoff() method for intuitive representation.
+
+**Each class may also implement a `describe()` or `plot_payoff()` method for intuitive representation and visualization.**
 
 > Note: Payoff functions are deterministic and assume the path is already simulated. Stochastic modeling and Monte Carlo logic are implemented separately.
