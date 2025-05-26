@@ -10,3 +10,4 @@ Each file implements a specific product type, such as:
 - Cliquets and path-dependent instruments
 
 Each product exposes a `payoff(path)` method to be used by simulation engines.
+Deterministic shown here.
