@@ -1,4 +1,4 @@
-# 01_products
+#Products
 
 This folder defines exotic option payoff structures.
 
