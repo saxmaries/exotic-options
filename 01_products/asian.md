@@ -58,3 +58,8 @@ print(option.payoff(path))  # e.g., returns 2.0
 
 # Optional: get product description
 print(option.describe())    # e.g., "Arithmetic Asian call with strike 100"
+
+
+$$
+\left( \prod_{i=1}^{n} S_i \right)^{1/n}
+$$
