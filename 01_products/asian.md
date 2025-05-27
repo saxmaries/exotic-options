@@ -29,7 +29,7 @@ Averaging features are typically incorporated to:
 
 ## Desk-Level Integration
 
-From a structuring desk perspective, Asian payoffs often serve as the **embedded mechanism** within broader structured products, including:
+From a structuring desk perspective, Asian-style averaging often serves as the **embedded payoff mechanism** within broader structured products, including:
 - **Accrual notes** (e.g., range accruals using daily or monthly averages)
 - **Cliquet-style structures** with averaging resets over observation intervals
 - **Step-down autocalls** or **defensive barrier notes** with coupons tied to average performance
