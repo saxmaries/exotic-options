@@ -191,6 +191,8 @@ class AsianOption(BaseProduct):
         # Optional: implement for diagnostics or Jupyter display
         pass
 
+---
+
 ## Example Code Usage
 
 ```python
