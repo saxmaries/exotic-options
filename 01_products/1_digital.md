@@ -218,6 +218,28 @@ They are especially sensitive to **volatility skew**, **barrier distance**, and 
 
 ---
 
+### Double One-Touch Option
+
+A double one-touch option pays a fixed amount $Q$ if the spot touches **either** the upper or lower barrier before expiry.
+
+Let $L$ and $H$ be the lower and upper barriers, respectively.
+
+$$
+\text{Payoff} =
+\begin{cases}
+Q, & \text{if } \exists\, t \in [0,T] \text{ such that } S_t \leq L \text{ or } S_t \geq H \\
+0, & \text{otherwise}
+\end{cases}
+$$
+
+This structure is used to express **breakout views**, especially in FX or event-driven contexts.
+
+It can be thought of as the **sum of an up-and-touch and a down-and-touch**, and is particularly sensitive to **volatility** and **barrier proximity**.
+
+While less common in structured retail notes, it is frequently used in **volatility-linked products**, **tactical trading**, or **replication-based strategies**.
+
+---
+
 Each of these payoff types introduces unique pricing and hedging considerations, often requiring **closed-form solutions (where available)** or **Monte Carlo simulation** when embedded within complex structured products.
 
 In the following sections, we’ll explore their **Greek sensitivities**, **modeling considerations**, and **Python class interface** for deterministic pricing.
