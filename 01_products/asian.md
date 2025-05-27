@@ -23,6 +23,11 @@ Where:
 - `Geomean(S)` is the geometric mean: \((\prod_{i=1}^n S_i)^{1/n}\)
 - `K` is the strike price
 
+Where:
+- `Avg(S)` is the arithmetic mean: $ \frac{1}{n} \sum_{i=1}^n S_i $
+- `Geomean(S)` is the geometric mean: $ \left( \prod_{i=1}^n S_i \right)^{1/n} $
+- `K` is the strike price
+  
 ---
 
 ## Class Interface
