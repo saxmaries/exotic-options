@@ -82,7 +82,21 @@ Where:
 
 - \( \phi = +1 \) for a call, \( \phi = -1 \) for a put  
 - \( A \) is the average of the underlying (either arithmetic or geometric)  
-- \( K \) is the strike price  
+- \( K \) is the strike price
+
+There are two main types of Asian options, depending on whether the **strike** or the **underlying** is averaged:
+
+- **Average Price Option (APO)** — also called a **DPO** (Discounted Payoff Option):  
+  The **underlying is averaged**, and payoff is compared to a fixed strike  
+  → Most common in real-world structured products
+
+- **Average Strike Option (ASO)** — also called a **DSO** (Discounted Strike Option):  
+  The **strike is averaged**, and the final spot is used in payoff  
+  → Rare in practice; more common in academic work or FX structuring
+
+In structured notes and desk-level implementation, the DPO / Average Price format is by far the most widely used. The table below summarizes the typical payoff formulations under this approach:
+
+---
 
 | Option Type             | Average Type  | Payoff Formula                         |
 |-------------------------|---------------|----------------------------------------|
