@@ -77,6 +77,7 @@ Asian options exhibit:
 | **Gamma** | Lower, as averaging smooths the payoff | Lower convexity → fewer sudden jumps in Delta; smoother PnL |
 | **Vega**  | Significantly lower due to reduced impact of implied vol | Less exposed to volatility changes → cheaper in high-vol regimes |
 | **Theta** | Less negative for long positions; less positive for short positions | Time decay is more gradual; long positions erode slower, short positions earn less |
+| **Rho**   | Lower, due to dampened sensitivity to forward price | Less affected by interest rate changes |
 
 This makes them attractive for **yield-enhancing** structures when issuers want exposure to average directional moves **without overpaying for vol**.
 
