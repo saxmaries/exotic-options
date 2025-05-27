@@ -119,11 +119,7 @@ $$
 \text{Geomean}(S) = \left( \prod_{i=1}^n S_i \right)^{1/n}
 $$
 
-And:
-
-$$
-K = \text{Strike Price}
-$$
+And: $K = \text{Strike Price}$
 
 ---
 
