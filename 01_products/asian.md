@@ -19,13 +19,18 @@ They are widely used in **FX**, **commodities**, and **equities** to:
 | Geometric Put    | Geometric     | max(K - Geomean(S), 0)                 |
 
 Where:
-- `Avg(S)` is the arithmetic mean: \(\frac{1}{n} \sum_{i=1}^n S_i\)
-- `Geomean(S)` is the geometric mean: \((\prod_{i=1}^n S_i)^{1/n}\)
+
+- `Avg(S)` is the arithmetic mean:  
+  $$
+  \frac{1}{n} \sum_{i=1}^n S_i
+  $$
+
+- `Geomean(S)` is the geometric mean:  
+  $$
+  \left( \prod_{i=1}^n S_i \right)^{1/n}
+  $$
+
 - `K` is the strike price
-  
-$$
-\text{Avg}(S) = \frac{1}{n} \sum_{i=1}^n S_i
-$$  
 
 ---
 
