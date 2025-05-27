@@ -10,6 +10,7 @@ The key variants in practice include:
 - **One-Touch Options:** Pays once if a barrier is touched any time before expiry
 - **No-Touch Options:** Pays only if a barrier is *never* breached
 - **Double No-Touch Options:** Pays if spot remains within a corridor throughout the life of the option
+- **Double One-Touch Options:** Pays if either an upper or lower barrier is touched before expiry
 
 ---
 
