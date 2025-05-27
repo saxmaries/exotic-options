@@ -66,3 +66,157 @@ Digitals are embedded in a wide range of structured products:
 Desk pricing models must handle the **explosive gamma and vega** around barrier levels, as even small spot movements can produce discontinuous valuation shifts. Static replication may be possible for some digital types (e.g., cash-or-nothing with vanillas and digitals), but dynamic hedging is required for path-dependent types like one-touch.
 
 Digital options are especially popular in **emerging market FX desks**, **private banking flow desks**, and **retail derivatives issuance platforms**, where payout simplicity and headline yield matter more than convexity or hedge efficiency.
+
+## Payoff Mechanics and Formulas
+
+Digital options exhibit **discrete payoffs** based on whether specific conditions are satisfied. Unlike vanilla options, which reward increasing moneyness, digital options deliver a **fixed payout**—often in cash or units of the underlying asset—regardless of how far in- or out-of-the-money the option finishes.
+
+Depending on the product type, digital options may trigger based on **terminal spot**, **barrier touch during the life**, or **absence of touch**. This creates a diverse family of contracts that differ significantly in their path-dependency, hedging profile, and market usage.
+
+---
+
+### Cash-or-Nothing Option
+
+A cash-or-nothing digital option pays a **fixed cash amount** $Q$ if the terminal spot breaches the strike price $K$.
+
+#### Call:
+
+$$
+\text{Payoff} = 
+\begin{cases}
+Q, & \text{if } S_T > K \\
+0, & \text{otherwise}
+\end{cases}
+$$
+
+#### Put:
+
+$$
+\text{Payoff} = 
+\begin{cases}
+Q, & \text{if } S_T < K \\
+0, & \text{otherwise}
+\end{cases}
+$$
+
+These are commonly used to express *pure directional bets* or define binary coupon structures within structured notes.
+
+---
+
+### Asset-or-Nothing Option
+
+An asset-or-nothing option pays **the terminal spot price** $S_T$ (instead of a fixed cash amount) if the option finishes in-the-money.
+
+#### Call:
+
+$$
+\text{Payoff} = 
+\begin{cases}
+S_T, & \text{if } S_T > K \\
+0, & \text{otherwise}
+\end{cases}
+$$
+
+#### Put:
+
+$$
+\text{Payoff} = 
+\begin{cases}
+S_T, & \text{if } S_T < K \\
+0, & \text{otherwise}
+\end{cases}
+$$
+
+While less common in practice than cash-based digitals, asset-or-nothing options are analytically useful and play a role in static replication of vanilla options.
+
+---
+
+### One-Touch Option
+
+A one-touch option pays a **fixed amount** $Q$ **if the underlying ever touches or breaches a barrier** $B$ during the option’s life.
+
+#### Up-and-Touch (Call-style):
+
+$$
+\text{Payoff} = 
+\begin{cases}
+Q, & \text{if } \exists\, t \in [0,T] \text{ such that } S_t \geq B \\
+0, & \text{otherwise}
+\end{cases}
+$$
+
+#### Down-and-Touch (Put-style):
+
+$$
+\text{Payoff} = 
+\begin{cases}
+Q, & \text{if } \exists\, t \in [0,T] \text{ such that } S_t \leq B \\
+0, & \text{otherwise}
+\end{cases}
+$$
+
+This option is **path-dependent**, and in practice may be settled either:
+- **Immediately upon touching** (American-style)
+- **At expiry** if touch occurred (European-style payout)
+
+One-touch options are sensitive to **volatility**, **barrier proximity**, and **time decay**, and are often used to build *leveraged, short-dated yield products* in FX markets.
+
+---
+
+### No-Touch Option
+
+A no-touch option pays a fixed amount $Q$ **only if the barrier is never touched** during the life of the option.
+
+#### Up-and-No-Touch:
+
+$$
+\text{Payoff} = 
+\begin{cases}
+Q, & \text{if } \forall\, t \in [0,T],\, S_t < B \\
+0, & \text{otherwise}
+\end{cases}
+$$
+
+#### Down-and-No-Touch:
+
+$$
+\text{Payoff} = 
+\begin{cases}
+Q, & \text{if } \forall\, t \in [0,T],\, S_t > B \\
+0, & \text{otherwise}
+\end{cases}
+$$
+
+These options are popular in **range-bound or low-volatility** environments and form the basis of many *structured notes with capital preservation and coupon conditions*.
+
+---
+
+### Double No-Touch Option
+
+This structure pays a fixed amount only if the underlying **stays within a price corridor** for the entire life of the option.
+
+#### Payoff:
+
+Let $L$ and $H$ be the lower and upper barriers, respectively.
+
+$$
+\text{Payoff} = 
+\begin{cases}
+Q, & \text{if } S_t \in (L, H) \text{ for all } t \in [0,T] \\
+0, & \text{otherwise}
+\end{cases}
+$$
+
+Double no-touch options are widely used in:
+- **FX range accruals**
+- **Capital-at-risk notes**
+- **Accrual-based yield notes** with corridor triggers
+
+They are especially sensitive to **volatility skew**, **barrier distance**, and **time to expiry**.
+
+---
+
+Each of these payoff types introduces unique pricing and hedging considerations, often requiring **closed-form solutions (where available)** or **Monte Carlo simulation** when embedded within complex structured products.
+
+In the following sections, we’ll explore their **Greek sensitivities**, **modeling considerations**, and **Python class interface** for deterministic pricing.
+
