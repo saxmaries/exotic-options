@@ -1,11 +1,27 @@
 # Asian Options
 
-Asian options are a class of **path-dependent exotic options** where the payoff is based on the **average price** of the underlying asset over a period, rather than its price at maturity.
+Asian options are a class of **path-dependent exotic options** where the payoff is derived from the **average price** of the underlying asset over a specified observation period, rather than a single spot price at maturity.
 
-They are widely used in **FX**, **commodities**, and **equities** to:
-- Smooth out price spikes
-- Reduce market manipulation risk
-- Reduce volatility exposure
+Unlike European options, which are highly sensitive to terminal price levels, Asian options offer **smoothed exposure** over time. This structure is particularly useful for investors or issuers aiming to **reduce volatility risk**, **dampen manipulation risk**, or **engineer yield in a stable corridor**.
+
+They are frequently used in:
+- **Commodities**, where terminal spikes are common (e.g., energy, metals)
+- **FX-linked notes**, especially dual-currency or quanto notes
+- **Equity structured products** like range accruals or Phoenix autocalls with averaging features
+
+---
+
+## Structuring Motivation
+
+- Reduce **spot price sensitivity** near maturity
+- Mitigate **"fixing risk"** in thin or illiquid markets
+- Offer more **stable exposure** for investment-linked insurance products
+- Enable **coupon-linked exotic notes** based on average performance
+
+From a **desk perspective**, Asian structures often form the **payoff layer** embedded in:
+- Accrual notes
+- Cliquet structures with averaging resets
+- Step-down coupons or defensive barrier autocalls
 
 ---
 
@@ -37,6 +53,32 @@ And:
 $$
 K = \text{Strike Price}
 $$
+
+---
+
+## Geometric vs Arithmetic – Why It Matters
+
+- **Arithmetic average** is more commonly used in real-world structuring — it aligns with observable fixings and tends to produce **higher average values**, especially in rising markets.
+- **Geometric average** is less volatile, always less than or equal to the arithmetic mean (by Jensen's inequality), and often used in:
+  - Benchmarking closed-form solutions
+  - Equity indices where log-normal averaging assumptions apply
+
+While geometric options are less common in OTC products, they are excellent **academic proxies** and stress-testing tools due to their analytical tractability.
+
+---
+
+## Volatility & Greek Implications
+
+Asian options exhibit:
+
+| Greek     | Behavior vs Vanilla |
+|-----------|---------------------|
+| **Delta** | Flatter near expiry (averaging dampens directionality) |
+| **Gamma** | Lower — reduced convexity since payoff is smoothed |
+| **Vega**  | Significantly lower (less sensitive to implied vol shifts) |
+| **Theta** | Often more favorable for short positions, especially near maturity |
+
+This makes them attractive for **yield-enhancing** structures when issuers want exposure to average directional moves **without overpaying for vol**.
 
 ---
 
