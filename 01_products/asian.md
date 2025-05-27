@@ -71,12 +71,12 @@ While geometric options are less common in OTC products, they are excellent **ac
 
 Asian options exhibit:
 
-| Greek     | Behavior vs Vanilla |
-|-----------|---------------------|
-| **Delta** | Flatter near expiry (averaging dampens directionality) |
-| **Gamma** | Lower (reduced convexity since payoff is smoothed) |
-| **Vega**  | Significantly lower (less sensitive to implied vol shifts) |
-| **Theta** | Often more favorable for short positions, especially near maturity |
+| **Greek** | **Behavior vs Vanilla** | **Implication** |
+|-----------|--------------------------|------------------|
+| **Delta** | Flatter near expiry due to averaging dampening directionality | Less sensitive to spot changes, especially close to maturity |
+| **Gamma** | Lower, as averaging smooths the payoff | Lower convexity → fewer sudden jumps in Delta; smoother PnL |
+| **Vega**  | Significantly lower due to reduced impact of implied vol | Less exposed to volatility changes → cheaper in high-vol regimes |
+| **Theta** | Less negative for long positions; less positive for short positions | Time decay is more gradual; long positions erode slower, short positions earn less |
 
 This makes them attractive for **yield-enhancing** structures when issuers want exposure to average directional moves **without overpaying for vol**.
 
