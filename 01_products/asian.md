@@ -23,7 +23,7 @@ Where:
 $$
 \text{Avg}(S) = \frac{1}{n} \sum_{i=1}^n S_i
 $$
-
+is the arithmetic mean
 
 $$
 \text{Geomean}(S) = \left( \prod_{i=1}^n S_i \right)^{1/n}
