@@ -80,7 +80,7 @@ $$
 
 Where:
 
-- $\phi = +1$ for a call, $\phi = -1$ for a put  
+- $\phi=+1$ for a call, $\phi=-1$ for a put  
 - $A$ is the average of the underlying (either arithmetic or geometric)  
 - $K$ is the strike price
 
