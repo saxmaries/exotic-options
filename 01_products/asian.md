@@ -52,6 +52,24 @@ While most real-world OTC products use **arithmetic averaging**, geometric varia
 
 ---
 
+## Averaging Period & Fixing Conventions
+
+The definition of the averaging period is just as important as the averaging method. Structurers must specify:
+
+- **Start and end of the observation window:** Some notes average from trade date to maturity ("full averaging"), while others may only average in the last month ("partial averaging").
+- **Fixing frequency:** Common choices include daily, weekly, or monthly fixings. More frequent fixings result in smoother averaging but require more data and can increase operational risk.
+- **Fixing calendar:** Business day conventions apply. Holidays and market closures must be handled (e.g., next business day, modified following).
+- **Lag structure:** Some notes use lagged fixings (e.g., T-1 or last business day of the previous month), which can affect hedge timing and client perception.
+- **Forward-start averaging:** Especially common in structured notes, where averaging starts weeks or months after issuance.
+
+These parameters have meaningful effects on:
+
+- **Payoff shape** (e.g., a front-loaded average behaves differently than a back-loaded one)
+- **Greek behavior** (e.g., Delta and Vega profiles over time)
+- **Operational complexity** (fixing data feeds, fallback handling, etc.)
+
+---
+
 ## Payoff Formulas
 
 | Option Type             | Average Type  | Payoff Formula                         |
