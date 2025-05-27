@@ -100,6 +100,18 @@ K = \text{Strike Price}
 $$
 
 ---
+Generic Asian option payoff:
+
+$$
+\text{Payoff} = \max\left( \phi \cdot (A - K), 0 \right)
+$$
+
+Where:
+
+- \( \phi = +1 \) for a call, \( \phi = -1 \) for a put  
+- \( A \) is either \( \text{Avg}(S) \) or \( \text{Geomean}(S) \)
+- \( K \) is the strike
+---
 
 ## Volatility & Greek Implications
 
