@@ -159,7 +159,7 @@ Optionally, classes may also include:
 - `describe()`: Returns a product summary string
 - `plot_payoff(path=None)`: Visualization support (for notebooks or diagnostics)
 
-These conventions follow the design outlined in the repo's [README](../README.md).
+These conventions follow the design outlined in the repo's [README](01_products/README.md).
 
 ---
 
