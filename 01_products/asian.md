@@ -143,7 +143,7 @@ This makes them attractive for **yield-enhancing** structures when issuers want 
 
 ---
 
-## Implementation & Interface
+## Class Interface
 
 While the previous sections covered the conceptual and structuring logic of Asian options, this section introduces how these payoffs are **programmatically represented and evaluated** in this repo.
 
@@ -161,22 +161,52 @@ Optionally, classes may also include:
 
 These conventions follow the design outlined in the repo's [README](../01_products/README.md).
 
----
+### Implementation
+
+```python
+class AsianOption(BaseProduct):
+    def __init__(self, strike: float, option_type: str = "call", average_type: str = "arithmetic"):
+        self.strike = strike
+        self.option_type = option_type
+        self.average_type = average_type
+
+    def payoff(self, path: List[float]) -> float:
+        if self.average_type == "arithmetic":
+            avg = sum(path) / len(path)
+        elif self.average_type == "geometric":
+            product = 1
+            for p in path:
+                product *= p
+            avg = product ** (1 / len(path))
+        else:
+            raise ValueError("Unsupported average type")
+
+        intrinsic = avg - self.strike if self.option_type == "call" else self.strike - avg
+        return max(intrinsic, 0)
+
+    def describe(self) -> str:
+        return f"{self.average_type.capitalize()} Asian {self.option_type} with strike {self.strike}"
+
+    def plot_payoff(self, path=None):
+        # Optional: implement for diagnostics or Jupyter display
+        pass
 
 ## Example Code Usage
 
 ```python
 from products.asian import AsianOption
 
-# Define an Asian arithmetic call
-option = AsianOption(strike=100, average_type='arithmetic', option_type='call')
+# Define an Asian call option
+option = AsianOption(strike=100, option_type='call', average_type='arithmetic')
 
-# Simulated path (e.g., from GBM or real market data)
+# Example fixing path (e.g., from GBM or historical)
 path = [95, 98, 100, 102, 105]
 
 # Compute deterministic payoff
-print(option.payoff(path))  # e.g., returns 2.0
+print(option.payoff(path))      # Output: e.g., 2.0
 
-# Optional: get product description
-print(option.describe())    # e.g., "Arithmetic Asian call with strike 100"
+# Print product description
+print(option.describe())        # Output: "Arithmetic Asian call with strike 100"
 
+# Optionally plot payoff along a simulated path
+# option.plot_payoff(path)
