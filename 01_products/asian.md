@@ -20,19 +20,18 @@ They are widely used in **FX**, **commodities**, and **equities** to:
 
 Where:
 
-- `Avg(S)` is the arithmetic mean:  
-  $$
-  \text{Avg}(S) = \frac{1}{n} \sum_{i=1}^n S_i
-  $$
+$$
+\text{Avg}(S) = \frac{1}{n} \sum_{i=1}^n S_i
+$$
 
-- `Geomean(S)` is the geometric mean:  
-  $$
-  \text{Geomean}(S) = \left( \prod_{i=1}^n S_i \right)^{1/n}
-  $$
 
-- $$
-  K = \text{Strike Price}
-  $$
+$$
+\text{Geomean}(S) = \left( \prod_{i=1}^n S_i \right)^{1/n}
+$$
+
+$$
+K = \text{Strike Price}
+$$
 
 ---
 
