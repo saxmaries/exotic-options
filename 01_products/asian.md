@@ -192,7 +192,7 @@ class AsianOption(BaseProduct):
         pass
 ```
 
-See implementation: asian.py(01_products/asian.py)
+See implementation: [asian.py](../01_products/asian.py)
 
 ---
 
