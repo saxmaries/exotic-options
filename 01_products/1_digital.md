@@ -222,6 +222,8 @@ They are especially sensitive to **volatility skew**, **barrier distance**, and 
 
 A double one-touch option pays a fixed amount $Q$ if the spot touches **either** the upper or lower barrier before expiry.
 
+#### Payoff:
+
 Let $L$ and $H$ be the lower and upper barriers, respectively.
 
 $$
