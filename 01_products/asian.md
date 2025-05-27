@@ -58,7 +58,7 @@ $$
 
 ## Geometric vs Arithmetic – Why It Matters
 
-- **Arithmetic average** is more commonly used in real-world structuring — it aligns with observable fixings and tends to produce **higher average values**, especially in rising markets.
+- **Arithmetic average** is more commonly used in real-world structuring. It aligns with observable fixings and tends to produce **higher average values**, especially in rising markets.
 - **Geometric average** is less volatile, always less than or equal to the arithmetic mean (by Jensen's inequality), and often used in:
   - Benchmarking closed-form solutions
   - Equity indices where log-normal averaging assumptions apply
@@ -74,7 +74,7 @@ Asian options exhibit:
 | Greek     | Behavior vs Vanilla |
 |-----------|---------------------|
 | **Delta** | Flatter near expiry (averaging dampens directionality) |
-| **Gamma** | Lower — reduced convexity since payoff is smoothed |
+| **Gamma** | Lower (reduced convexity since payoff is smoothed) |
 | **Vega**  | Significantly lower (less sensitive to implied vol shifts) |
 | **Theta** | Often more favorable for short positions, especially near maturity |
 
