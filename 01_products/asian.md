@@ -52,7 +52,7 @@ While most real-world OTC products use **arithmetic averaging**, geometric varia
 
 ---
 
-## Key Variants
+## Payoff Formulas
 
 | Option Type             | Average Type  | Payoff Formula                         |
 |-------------------------|---------------|----------------------------------------|
