@@ -27,12 +27,12 @@ From a **desk perspective**, Asian structures often form the **payoff layer** em
 
 ## Key Variants
 
-| Type             | Average Type | Payoff Formula                        |
-|------------------|---------------|----------------------------------------|
-| Call             | Arithmetic    | max(Avg(S) - K, 0)                     |
-| Put              | Arithmetic    | max(K - Avg(S), 0)                     |
-| Call             | Geometric     | max(Geomean(S) - K, 0)                 |
-| Put              | Geometric     | max(K - Geomean(S), 0)                 |
+| Option Type             | Average Type  | Payoff Formula                         |
+|-------------------------|---------------|----------------------------------------|
+| Call                    | Arithmetic    | max(Avg(S) - K, 0)                     |
+| Put                     | Arithmetic    | max(K - Avg(S), 0)                     |
+| Call                    | Geometric     | max(Geomean(S) - K, 0)                 |
+| Put                     | Geometric     | max(K - Geomean(S), 0)                 |
 
 Where:
 
