@@ -13,10 +13,10 @@ They are widely used in **FX**, **commodities**, and **equities** to:
 
 | Type             | Average Type | Payoff Formula                        |
 |------------------|---------------|----------------------------------------|
-| Arithmetic Call  | Arithmetic    | max(Avg(S) - K, 0)                     |
-| Arithmetic Put   | Arithmetic    | max(K - Avg(S), 0)                     |
-| Geometric Call   | Geometric     | max(Geomean(S) - K, 0)                 |
-| Geometric Put    | Geometric     | max(K - Geomean(S), 0)                 |
+| Call             | Arithmetic    | max(Avg(S) - K, 0)                     |
+| Put              | Arithmetic    | max(K - Avg(S), 0)                     |
+| Call             | Geometric     | max(Geomean(S) - K, 0)                 |
+| Put              | Geometric     | max(K - Geomean(S), 0)                 |
 
 Where:
 
