@@ -143,20 +143,23 @@ This makes them attractive for **yield-enhancing** structures when issuers want 
 
 ---
 
-## Class Interface
+## Implementation & Interface
 
-Each Asian option implements the following methods:
+While the previous sections covered the conceptual and structuring logic of Asian options, this section introduces how these payoffs are **programmatically represented and evaluated** in this repo.
 
-- `payoff(path: List[float]) -> float`  
-  Returns the deterministic payoff based on a given price path.
+Each product in `01_products/` exposes a consistent class interface, designed to be compatible with the pricing engines in `03_simulations/` and the stochastic models in `02_models/`.
 
-- `describe() -> str`  
-  Returns a human-readable product description.
+At the core of every product class is:
 
-- `plot_payoff(path=None)`  
-  (Optional) Visualizes payoff behavior along a price path.
+- `payoff(path: List[float])`:  
+  A **deterministic** function that returns the final payoff based on a given price path (i.e., once all fixings are known).
+  
+Optionally, classes may also include:
 
-These are designed to be **used by pricing engines in `03_simulations/`**.
+- `describe()`: Returns a product summary string
+- `plot_payoff(path=None)`: Visualization support (for notebooks or diagnostics)
+
+These conventions follow the design outlined in the repo's [README](../README.md).
 
 ---
 
