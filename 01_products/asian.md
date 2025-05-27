@@ -36,6 +36,22 @@ From a structuring desk perspective, Asian payoffs often serve as the **embedded
 
 ---
 
+## Payoff Mechanics
+
+Asian options derive their value from averaging a set of underlying fixings, which directly impacts both their payoff shape and sensitivity profile. The two most common averaging approaches are:
+
+- **Arithmetic averaging**, which takes the simple mean of observed prices
+- **Geometric averaging**, which uses the nth root of the price product
+
+The choice of averaging method can significantly affect option valuation and behavior:
+
+- Arithmetic averages tend to be higher in upward-trending markets, making **arithmetic Asians more valuable** in bullish scenarios.
+- Geometric averages are less volatile and always equal to or less than the arithmetic mean (by Jensen's inequality), making them useful for **analytic approximations** and **model calibration**.
+
+While most real-world OTC products use **arithmetic averaging**, geometric variants are often studied in theory due to their mathematical tractability.
+
+---
+
 ## Key Variants
 
 | Option Type             | Average Type  | Payoff Formula                         |
@@ -64,17 +80,6 @@ And:
 $$
 K = \text{Strike Price}
 $$
-
----
-
-## Geometric vs Arithmetic – Why It Matters
-
-- **Arithmetic average** is more commonly used in real-world structuring. It aligns with observable fixings and tends to produce **higher average values**, especially in rising markets.
-- **Geometric average** is less volatile, always less than or equal to the arithmetic mean (by Jensen's inequality), and often used in:
-  - Benchmarking closed-form solutions
-  - Equity indices where log-normal averaging assumptions apply
-
-While geometric options are less common in OTC products, they are excellent **academic proxies** and stress-testing tools due to their analytical tractability.
 
 ---
 
