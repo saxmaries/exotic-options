@@ -26,6 +26,7 @@ Where:
 $$
 \text{Avg}(S) = \frac{1}{n} \sum_{i=1}^n S_i
 $$  
+
 ---
 
 ## Class Interface
