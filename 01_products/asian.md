@@ -192,6 +192,8 @@ class AsianOption(BaseProduct):
         pass
 ```
 
+See implementation: asian.py
+
 ---
 
 ## Example Code Usage
