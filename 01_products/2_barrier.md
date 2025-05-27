@@ -1,6 +1,6 @@
 # Barrier Options
 
-Barrier options are a class of **path dependent exotic derivatives** whose payoffs are dependent on the fullfilling or breaching of a
+Barrier options are a class of **path dependent exotic derivatives** whose payoffs are dependent on the activation or breaching of a barrier.
 
 $$
 \text{Discretized Heston Model:}
