@@ -80,9 +80,9 @@ $$
 
 Where:
 
-- \( \phi = +1 \) for a call, \( \phi = -1 \) for a put  
-- \( A \) is the average of the underlying (either arithmetic or geometric)  
-- \( K \) is the strike price
+- $ \phi = +1 $ for a call, $ \phi = -1 $ for a put  
+- $ A $ is the average of the underlying (either arithmetic or geometric)  
+- $ K $ is the strike price
 
 There are two main types of Asian options, depending on whether the **strike** or the **underlying** is averaged:
 
