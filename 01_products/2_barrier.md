@@ -5,3 +5,19 @@ Barrier options are a class of **path dependent exotic derivatives** whose payof
 $$
 \text{Discretized SDE:} \quad X_{n+1} = X_n + \Delta t \cdot \mu\left(X_n, t_n\right) + \sum_{i=1}^m \sigma_i\left(X_n, t_n\right) \cdot \Delta W_n^{(i)} + \frac{1}{2} \sum_{i=1}^m \left( \sigma_i\left(X_n, t_n\right) \cdot \nabla_x \sigma_i\left(X_n, t_n\right) \right) \cdot \left( \left( \Delta W_n^{(i)} \right)^2 - \Delta t \right) + \mathcal{O}\left( (\Delta t)^{3/2} \right)
 $$
+
+$$
+\text{Discretized Heston Model:}
+$$
+
+$$
+S_{n+1} = S_n + \mu S_n \Delta t + \sqrt{v_n} S_n \Delta W_n^{(1)}
+$$
+
+$$
+v_{n+1} = v_n + \kappa \left( \theta - v_n \right) \Delta t + \sigma \sqrt{v_n} \Delta W_n^{(2)}
+$$
+
+$$
+\text{with} \quad \mathbb{E}\left[\Delta W_n^{(1)} \cdot \Delta W_n^{(2)}\right] = \rho \Delta t
+$$
