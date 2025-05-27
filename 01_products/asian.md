@@ -72,6 +72,18 @@ These parameters have meaningful effects on:
 
 ## Payoff Formulas
 
+Asian options can be expressed under a generalized payoff structure:
+
+$$
+\text{Payoff} = \max\left( \phi \cdot (A - K), 0 \right)
+$$
+
+Where:
+
+- \( \phi = +1 \) for a call, \( \phi = -1 \) for a put  
+- \( A \) is the average of the underlying (either arithmetic or geometric)  
+- \( K \) is the strike price  
+
 | Option Type             | Average Type  | Payoff Formula                         |
 |-------------------------|---------------|----------------------------------------|
 | Call                    | Arithmetic    | max(Avg(S) - K, 0)                     |
@@ -99,18 +111,6 @@ $$
 K = \text{Strike Price}
 $$
 
----
-Generic Asian option payoff:
-
-$$
-\text{Payoff} = \max\left( \phi \cdot (A - K), 0 \right)
-$$
-
-Where:
-
-- \( \phi = +1 \) for a call, \( \phi = -1 \) for a put  
-- \( A \) is either \( \text{Avg}(S) \) or \( \text{Geomean}(S) \)
-- \( K \) is the strike
 ---
 
 ## Volatility & Greek Implications
