@@ -86,11 +86,11 @@ Where:
 
 There are two main types of Asian options, depending on whether the **strike** or the **underlying** is averaged:
 
-- **Average Price Option (APO)** — also called a **DPO** (Discounted Payoff Option):  
+- **Average Price Option (APO)**, also called a **DPO** (Discounted Payoff Option):  
   The **underlying is averaged**, and payoff is compared to a fixed strike  
   → Most common in real-world structured products
 
-- **Average Strike Option (ASO)** — also called a **DSO** (Discounted Strike Option):  
+- **Average Strike Option (ASO)**, also called a **DSO** (Discounted Strike Option):  
   The **strike is averaged**, and the final spot is used in payoff  
   → Rare in practice; more common in academic work or FX structuring
 
