@@ -190,6 +190,7 @@ class AsianOption(BaseProduct):
     def plot_payoff(self, path=None):
         # Optional: implement for diagnostics or Jupyter display
         pass
+```
 
 ---
 
