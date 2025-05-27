@@ -57,7 +57,7 @@ While most real-world OTC products use **arithmetic averaging**, geometric varia
 The definition of the averaging period is just as important as the averaging method. Structurers must specify:
 
 - **Start and end of the observation window:** Some notes average from trade date to maturity ("full averaging"), while others may only average in the last month ("partial averaging").
-- **Fixing frequency:** Common choices include daily, weekly, or monthly fixings. More frequent fixings result in smoother averaging but require more data and can increase operational risk.
+- **Fixing frequency:** Daily, weekly, or monthly. More frequent fixings produce smoother averages, but increase data handling and operational risk.
 - **Fixing calendar:** Business day conventions apply. Holidays and market closures must be handled (e.g., next business day, modified following).
 - **Lag structure:** Some notes use lagged fixings (e.g., T-1 or last business day of the previous month), which can affect hedge timing and client perception.
 - **Forward-start averaging:** Especially common in structured notes, where averaging starts weeks or months after issuance.
