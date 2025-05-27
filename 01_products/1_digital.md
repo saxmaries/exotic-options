@@ -67,6 +67,8 @@ Desk pricing models must handle the **explosive gamma and vega** around barrier 
 
 Digital options are especially popular in **emerging market FX desks**, **private banking flow desks**, and **retail derivatives issuance platforms**, where payout simplicity and headline yield matter more than convexity or hedge efficiency.
 
+---
+
 ## Payoff Mechanics and Formulas
 
 Digital options exhibit **discrete payoffs** based on whether specific conditions are satisfied. Unlike vanilla options, which reward increasing moneyness, digital options deliver a **fixed payout**—often in cash or units of the underlying asset—regardless of how far in- or out-of-the-money the option finishes.
