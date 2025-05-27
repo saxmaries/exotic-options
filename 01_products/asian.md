@@ -1,27 +1,40 @@
 # Asian Options
 
-Asian options are a class of **path-dependent exotic options** where the payoff is derived from the **average price** of the underlying asset over a specified observation period, rather than a single spot price at maturity.
+Asian options are a class of **path-dependent exotic derivatives** where the **payoff depends on the average price** of the underlying asset over a specified observation period, rather than a single terminal fixing.
 
-Unlike European options, which are highly sensitive to terminal price levels, Asian options offer **smoothed exposure** over time. This structure is particularly useful for investors or issuers aiming to **reduce volatility risk**, **dampen manipulation risk**, or **engineer yield in a stable corridor**.
+This averaging mechanism provides **smoothed market exposure** and makes the option less sensitive to short-term volatility or final-day price spikes, unlike European-style options that are fully exposed to the terminal spot. As a result, Asian options are often used to **dampen price volatility**, **reduce manipulation risk**, and **create more stable payoff profiles**.
 
-They are frequently used in:
-- **Commodities**, where terminal spikes are common (e.g., energy, metals)
-- **FX-linked notes**, especially dual-currency or quanto notes
-- **Equity structured products** like range accruals or Phoenix autocalls with averaging features
+Although they can be traded as **standalone exotics**, in practice, Asian options are **more frequently embedded** within structured products. The averaging logic is commonly used as a building block to shape risk-reward dynamics, stabilize coupon outcomes, or meet specific investment mandates.
+
+---
+
+## Common Use Cases
+
+Asian-style structures are widely used in asset classes and products where smoothing is essential:
+- **Commodities**, where sharp end-of-period spikes are common (e.g., energy, industrial metals)
+- **FX-linked structured notes**, including quanto and dual-currency formats
+- **Equity structured products**, such as Phoenix autocalls, range accruals, and yield notes featuring average-based conditions
 
 ---
 
 ## Structuring Motivation
 
+Averaging features are typically incorporated to:
 - Reduce **spot price sensitivity** near maturity
-- Mitigate **"fixing risk"** in thin or illiquid markets
-- Offer more **stable exposure** for investment-linked insurance products
-- Enable **coupon-linked exotic notes** based on average performance
+- Mitigate **fixing risk** in thin or illiquid markets
+- Provide **stable exposure** for insurance-wrapped or retail-linked strategies
+- Facilitate **coupon-linked exotic payoffs** based on average asset behavior
 
-From a **desk perspective**, Asian structures often form the **payoff layer** embedded in:
-- Accrual notes
-- Cliquet structures with averaging resets
-- Step-down coupons or defensive barrier autocalls
+---
+
+## Desk-Level Integration
+
+From a structuring desk perspective, Asian payoffs often serve as the **embedded mechanism** within broader structured products, including:
+- **Accrual notes** (e.g., range accruals using daily or monthly averages)
+
+- **Cliquet-style structures** with averaging resets over observation intervals
+
+- **Step-down autocalls** or **defensive barrier notes** with coupons tied to average performance
 
 ---
 
