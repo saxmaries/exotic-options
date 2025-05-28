@@ -30,8 +30,6 @@ To follow this repo, you should be comfortable with:
 - Basic stochastic calculus (GBM, volatility surfaces)
 - Python and Jupyter
 
-- MFE/MQF candidates highly preferred.
-
 ---
 
 ## Repo Structure
