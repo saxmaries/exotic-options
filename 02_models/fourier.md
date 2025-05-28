@@ -65,7 +65,7 @@ This integral can be computed efficiently using the **Fast Fourier Transform (FF
 ## In This Repo
 
 The Fourier logic lives in:  
-📄 `02_models/fourier_pricing.py`
+`02_models/fourier_pricing.py`
 
 You can price a grid of call options using:
 
