@@ -25,9 +25,12 @@ It's designed to help answer questions like:
 ## Assumed Knowledge
 
 To follow this repo, you should be comfortable with:
-- **Vanilla option pricing** and the **Black-Scholes framework**
-- Basic **stochastic calculus** (GBM, volatility surfaces)
+- General finance concepts (equity, fixed income, FX, and basic derivative instruments)
+- Vanilla option pricing and the Black-Scholes framework
+- Basic stochastic calculus (GBM, volatility surfaces)
 - Python and Jupyter
+
+- MFE/MQF candidates highly preferred.
 
 ---
 
