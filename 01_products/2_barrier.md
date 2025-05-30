@@ -4,9 +4,7 @@ Barrier options are a class of **path-dependent exotic options** whose validity 
 
 These options allow structurers and traders to **dynamically shape the payout exposure**, reducing or increasing option value based on whether certain market conditions are met. They are particularly effective for **cost-efficient hedging**, **contingent risk-taking**, and **volatility monetization**, especially in **directional markets** or **range-bound regimes**.
 
----
-
-## Key Variants
+The key variants in practice include:
 
 - **Knock-In Options**: Option becomes active only if the barrier is touched  
   - *Up-and-In / Down-and-In (Call or Put)*
