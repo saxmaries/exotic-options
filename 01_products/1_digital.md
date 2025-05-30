@@ -175,7 +175,7 @@ A no-touch option pays a fixed amount $Q$ **only if the barrier is never touched
 $$
 \text{Payoff} = 
 \begin{cases}
-Q, & \text{if } \forall\, t \in [0,T],\, S_t < B \\
+Q, & \text{if } \forall\, t \in [0,T] \text{ such that } S_t < B \\
 0, & \text{otherwise}
 \end{cases}
 $$
@@ -185,7 +185,7 @@ $$
 $$
 \text{Payoff} = 
 \begin{cases}
-Q, & \text{if } \forall\, t \in [0,T],\, S_t > B \\
+Q, & \text{if } \forall\, t \in [0,T] \text{ such that } S_t > B \\
 0, & \text{otherwise}
 \end{cases}
 $$
