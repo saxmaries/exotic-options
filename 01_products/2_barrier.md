@@ -88,18 +88,3 @@ Barriers are often **cheaper than digitals**, yet they enable **refined structur
 
 
 
-$$
-\text{Discretized Heston Model:}
-$$
-
-$$
-S_{n+1} = S_n + \mu S_n \Delta t + \sqrt{v_n} S_n \Delta W_n^{(1)}
-$$
-
-$$
-v_{n+1} = v_n + \kappa \left( \theta - v_n \right) \Delta t + \sigma \sqrt{v_n} \Delta W_n^{(2)}
-$$
-
-$$
-\text{with} \quad \mathbb{E}\left[\Delta W_n^{(1)} \cdot \Delta W_n^{(2)}\right] = \rho \Delta t
-$$
