@@ -138,7 +138,7 @@ While less common in practice than cash-based digitals, asset-or-nothing options
 
 A one-touch option pays a **fixed amount** $Q$ **if the underlying ever touches or breaches a barrier** $B$ during the option’s life.
 
-#### Up-and-Touch (Call-style):
+#### Up-and-Touch:
 
 $$
 \text{Payoff} = 
@@ -148,7 +148,7 @@ Q, & \text{if } \exists\, t \in [0,T] \text{ such that } S_t \geq B \\
 \end{cases}
 $$
 
-#### Down-and-Touch (Put-style):
+#### Down-and-Touch:
 
 $$
 \text{Payoff} = 
