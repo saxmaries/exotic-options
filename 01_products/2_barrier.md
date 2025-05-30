@@ -86,5 +86,98 @@ Replication strategies exist (e.g., semi-static replication of knock-outs via va
 Barriers are often **cheaper than digitals**, yet they enable **refined structuring of traditional call/put payoffs**, making them a favorite for building **tailored risk-return profiles** in both institutional and retail markets.
 
 
+## Payoff Mechanics and Formulas
+
+Barrier options inherit the shape of **vanilla call or put payoffs**, but introduce **activation (knock-in)** or **cancellation (knock-out)** conditions based on whether the underlying price **breaches a barrier** during the option’s life.
+
+The standard European vanilla option payoff:
+
+```
+ψ · (φ · (S_T − K))⁺
+```
+
+…is multiplied by a barrier condition that either **enables** or **nullifies** the payoff depending on the price path.
+
+Where:
+
+- `φ ∈ {+1, -1}`: `+1` for **Call**, `-1` for **Put**
+- `ψ ∈ {+1, -1}`: `+1` for **Long**, `-1` for **Short**
+- `d ∈ {+1, -1}`: `+1` for **Up barrier**, `-1` for **Down barrier**
+- `B`: barrier level  
+- `K`: strike price  
+- `S_T`: terminal spot price  
+- `S_t`: spot at time `t ∈ [0, T]`
+
+---
+
+### Knock-In Barrier Option
+
+A knock-in option becomes **active only if the barrier is touched** during the option’s life.
+
+```
+Payoff = {
+  ψ · (φ · (S_T − K))⁺,    if ∃ t ∈ [0, T] such that d · (S_t − B) ≥ 0
+  0,                      otherwise
+}
+```
+
+Used when the buyer wants exposure **only if a trigger level is breached** — often for contingent hedging or tail-risk participation.
+
+---
+
+### Knock-Out Barrier Option
+
+A knock-out option becomes **void if the barrier is touched** at any point before expiry.
+
+```
+Payoff = {
+  ψ · (φ · (S_T − K))⁺,    if ∀ t ∈ [0, T], d · (S_t − B) < 0
+  0,                      otherwise
+}
+```
+
+Used to reduce premium cost by **sacrificing payout** if the market moves beyond a specified level.
+
+---
+
+### Double Knock-In Option
+
+A double knock-in requires the underlying to **touch either the lower or upper barrier** for activation.
+
+Let `L` and `H` be the **lower and upper barriers**, with `L < H`.
+
+```
+Payoff = {
+  ψ · (φ · (S_T − K))⁺,    if ∃ t ∈ [0, T] such that S_t ≤ L or S_t ≥ H
+  0,                      otherwise
+}
+```
+
+This structure is useful when the investor wants payoff exposure **only if the market breaks out of a range** in either direction.
+
+---
+
+### Double Knock-Out Option
+
+A double knock-out option becomes **worthless if the underlying touches either barrier** during the option’s life.
+
+```
+Payoff = {
+  ψ · (φ · (S_T − K))⁺,    if S_t ∈ (L, H) for all t ∈ [0, T]
+  0,                      otherwise
+}
+```
+
+Used in **range-bound strategies** and capital-efficient instruments that **reward stability** — popular in FX accruals, structured notes, or callable bonds.
+
+---
+
+### Notes on Interpretation
+
+- All payoff expressions assume **European-style settlement** (at expiry)  
+- Monitoring is **continuous** unless otherwise specified  
+- The `(x)⁺ = max(x, 0)` convention handles both call/put payoffs under `φ`  
+- These payoffs **exclude rebates**, which can be added as separate cashflows if applicable
+
 
 
