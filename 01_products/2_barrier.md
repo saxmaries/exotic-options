@@ -6,6 +6,9 @@ These options allow structurers and traders to **dynamically shape the payout ex
 
 The key variants in practice include:
 
+Digital Barrier Options
+One-touch / No touch / Double
+
 - **Knock-In Options**: Option becomes active only if the barrier is touched  
   - *Up-and-In / Down-and-In (Call or Put)*
 
@@ -14,9 +17,6 @@ The key variants in practice include:
 
 - **Double Barrier Options**: Presence of both upper and lower barriers  
   - *Double Knock-In, Double Knock-Out, Hybrid KO/KI configurations*
-
-Digital Barrier Options
-One-touch / No touch / Double
 
 ---
 
