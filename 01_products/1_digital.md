@@ -7,10 +7,7 @@ Because of their binary nature, digital options are frequently used to **express
 The key variants in practice include:
 - **Cash-or-Nothing Calls/Puts:** Fixed payout if terminal spot breaches a strike
 - **Asset-or-Nothing Calls/Puts:** Underlying asset delivered if in-the-money
-- **One-Touch Options:** Pays once if a barrier is touched any time before expiry
-- **No-Touch Options:** Pays only if a barrier is *never* breached
-- **Double No-Touch Options:** Pays if spot remains within a corridor throughout the life of the option
-- **Double One-Touch Options:** Pays if either an upper or lower barrier is touched before expiry
+- Gap Options
 
 ---
 
