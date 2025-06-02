@@ -15,6 +15,9 @@ The key variants in practice include:
 - **Double Barrier Options**: Presence of both upper and lower barriers  
   - *Double Knock-In, Double Knock-Out, Hybrid KO/KI configurations*
 
+Digital Barrier Options
+One-touch / No touch / Double
+
 ---
 
 ## Common Use Cases
